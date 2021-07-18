@@ -1,0 +1,18 @@
+.nav-bar {
+    height: 3.5rem;
+    color: white;
+    box-shadow: var(--default-shadow);
+}
+
+.nav-logo-container {
+    height: 100%;
+    display: inline-block;
+}
+
+.nav-logo {
+    height: 100%;
+}
+
+.nav-logo-txt {
+    display: inline-block;
+}
