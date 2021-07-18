@@ -2,10 +2,16 @@
     border: none;
     margin: 0;
     padding: 0;
+    cursor: pointer;
+    border-radius: .5rem;
+}
+
+.restaurant-card:hover {
+    background-color: var(--color-gray-extra-light);
 }
 
 .rc-body {
-    padding: 1rem;
+    padding: .6rem;
 }
 
 .rc-restaurant-name {

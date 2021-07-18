@@ -1,5 +1,10 @@
+.search-c {
+    margin-top: 1rem;
+    padding: .8rem 1.2rem;
+}
+
 .restaurants-grid {
     display: grid;
     grid-template-columns: auto auto;
-    padding: 1rem;
+    padding: .6rem;
 }

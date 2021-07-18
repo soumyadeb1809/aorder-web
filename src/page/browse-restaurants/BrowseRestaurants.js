@@ -10,6 +10,7 @@ import rs5 from "../../assets/rs5.jpeg";
 import rs6 from "../../assets/rs6.jpeg";
 import rs7 from "../../assets/rs7.jpeg";
 import rs8 from "../../assets/rs8.jpeg";
+import Search from "../../components/search/Search";
 
 export default class BrowseRestuarants extends Component {
 
@@ -17,7 +18,11 @@ export default class BrowseRestuarants extends Component {
         return(
             <div className="browse-restaurants-main">
                 <NavBar />
-                <div style={ { height: "20px" } }></div>
+
+                <div className="search-c">
+                    <Search placeholder="Search restaurants or food"/>
+                </div>
+
                 <div className="restaurants-grid">
                     <RestaurantCard 
                         name="The Asian Kitchen"

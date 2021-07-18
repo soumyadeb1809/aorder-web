@@ -1,0 +1,27 @@
+.search-card {
+    border: none;
+    box-shadow: var(--default-shadow);
+    border-radius: .5rem;
+}
+
+.sc-body {
+    padding: .6rem 1rem;
+}
+
+.search-icon {
+    color: var(--color-gray-light);
+    font-size: 1.5rem;
+}
+
+.search-input {
+    border: none;
+}
+
+.search-input::placeholder {
+    color: var(--color-gray-light);
+}
+
+.search-form {
+    display: flex;
+    align-items: center;
+}
