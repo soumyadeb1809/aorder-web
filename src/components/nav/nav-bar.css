@@ -1,7 +1,8 @@
 .nav-bar {
     height: 4rem;
-    color: white;
+    color: var(--color-white);
     box-shadow: var(--default-shadow);
+    font-weight: 700;
 }
 
 .nav-logo-container {

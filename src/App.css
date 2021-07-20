@@ -1,11 +1,19 @@
 :root {
   --color-primary: #151D20;
   --color-secorndary: #6E8396;
+
   --color-gray: #707070;
   --color-gray-light: #A8B4C0;
   --color-gray-extra-light: #E2E5EA;
   --color-white: #FFFFFF;
+  --color-green: #058900;
+  --color-red: #C90000;
 
 
   --default-shadow: 0 1px 10px rgba(0, 0, 0, 0.2);
+}
+
+.search-c {
+  margin-top: 1rem;
+  padding: .8rem 1rem;
 }

@@ -7,7 +7,7 @@ const RestaurantCard = ({ img, name, category }) => {
         <Card className="restaurant-card">
             <Card.Body className="rc-body">
                 <div className="rc-restaurant-img-c">
-                    <img className="rc-restaurant-img" src={ img } />
+                    <img className="rc-restaurant-img" src={ img } alt={ name } />
                 </div>
                 <Card.Title className="rc-restaurant-name">
                     { name }
