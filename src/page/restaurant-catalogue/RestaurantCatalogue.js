@@ -10,6 +10,9 @@ import it3 from "../../assets/it3.jpeg";
 import it4 from "../../assets/it4.jpeg";
 import it5 from "../../assets/it5.jpeg";
 import it6 from "../../assets/it6.jpeg";
+import { Accordion, Card, Modal } from "react-bootstrap";
+import MenuFAB from "../../components/menu-fab/MenuFAB";
+import MenuModal from "../../components/menu-modal/MenuModal";
 
 class RestaurantCatalogue extends Component {
 
@@ -24,6 +27,7 @@ class RestaurantCatalogue extends Component {
                 </div>
 
                 <div className="catalogue">
+                    
                     <CatalogueItemCard 
                         name="Butter Chicken"
                         price="₹325"
@@ -72,6 +76,14 @@ class RestaurantCatalogue extends Component {
                         tag="n-veg"
                         description="Chicken tikka/tandoori cooked in rich tomato & white gravy finished with cream & butter."
                     />
+                </div>
+
+                <div className="menu-btn-c">
+                    <MenuFAB />
+                </div>
+
+                <div className="menu-modal-c">
+                    <MenuModal />
                 </div>
                 
             </div>

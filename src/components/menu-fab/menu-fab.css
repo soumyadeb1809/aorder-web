@@ -1,0 +1,18 @@
+.menu-fab {
+    background-color: var(--color-primary);
+    border-radius: 10rem;
+    border: none;
+    display: flex;
+    align-items: center;
+    padding: .8rem 1.5rem;
+    box-shadow: var(--default-shadow);
+}
+
+.mf-icon {
+    margin-right: .5rem;
+    font-size: 1.5rem;
+}
+
+.mf-txt {
+    font-weight: 700;
+}
