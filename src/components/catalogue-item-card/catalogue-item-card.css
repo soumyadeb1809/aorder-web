@@ -50,6 +50,8 @@
 .cic-item-img-c {
     height: 8rem;
     flex: 12rem;
+    max-width: 20rem;
+    min-width: 8rem;
     justify-self: end;
 }
 

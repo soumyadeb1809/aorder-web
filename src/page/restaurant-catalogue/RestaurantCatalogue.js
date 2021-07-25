@@ -1,4 +1,4 @@
-import { Component } from "react";
+import { Component, useState } from "react";
 import "./restaurant-catalogue.css";
 import NavBar from "../../components/nav/NavBar";
 import Search from "../../components/search/Search";
@@ -13,21 +13,24 @@ import it6 from "../../assets/it6.jpeg";
 import { Accordion, Card, Modal } from "react-bootstrap";
 import MenuFAB from "../../components/menu-fab/MenuFAB";
 import MenuModal from "../../components/menu-modal/MenuModal";
+import CatelogueCategoryCard from "../../components/catalogue-category-card/CatalogueCategoryCard";
 
-class RestaurantCatalogue extends Component {
 
-    render() {
-        return (
-            <div className="restaurant-catalogue-main">
-                <NavBar/>
-                <div className="search-c">
-                    <Search 
-                        placeholder="Search food"
-                    />
-                </div>
+const RestaurantCatalogue = () => {
 
-                <div className="catalogue">
-                    
+    const [showMenuPopup, setShowMenuPopup] = useState(false);
+
+    return (
+        <div className="restaurant-catalogue-main">
+            <NavBar/>
+            <div className="search-c">
+                <Search 
+                    placeholder="Search food"
+                />
+            </div>
+
+            <div className="catalogue">
+                <CatelogueCategoryCard name="Recommended">
                     <CatalogueItemCard 
                         name="Butter Chicken"
                         price="₹325"
@@ -42,6 +45,8 @@ class RestaurantCatalogue extends Component {
                         tag="veg"
                         description="Panner tikka/tandoori cooked in rich tomato & white gravy finished with cream & butter."
                     />
+                </CatelogueCategoryCard>
+                <CatelogueCategoryCard name="Starters">
                     <CatalogueItemCard 
                         name="Chicken Keema"
                         price="₹299"
@@ -62,6 +67,8 @@ class RestaurantCatalogue extends Component {
                         tag="veg"
                         description="Dahi kebab cooked in rich tomato & white gravy finished with cream & butter."
                     />
+                </CatelogueCategoryCard>
+                <CatelogueCategoryCard name="Main Course">
                     <CatalogueItemCard 
                         name="Bhuna Murgh"
                         price="₹399"
@@ -76,19 +83,26 @@ class RestaurantCatalogue extends Component {
                         tag="n-veg"
                         description="Chicken tikka/tandoori cooked in rich tomato & white gravy finished with cream & butter."
                     />
-                </div>
-
-                <div className="menu-btn-c">
-                    <MenuFAB />
-                </div>
-
-                <div className="menu-modal-c">
-                    <MenuModal />
-                </div>
-                
+                </CatelogueCategoryCard>
+      
             </div>
-        );
-    }
+
+            <div className="menu-btn-c">
+                <MenuFAB 
+                    onClick={ () => setShowMenuPopup(true) }
+                />
+            </div>
+
+            <div className="menu-modal-c">
+                <MenuModal
+                    show={ showMenuPopup }
+                    closeHandler={ () => setShowMenuPopup(false) }
+                />
+            </div>
+            
+        </div>
+    );
+    
 }
 
 export default RestaurantCatalogue;

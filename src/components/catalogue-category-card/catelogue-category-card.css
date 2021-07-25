@@ -1,0 +1,9 @@
+.catalogue-category-card {
+    display: inline-block;
+}
+
+.cc-header {
+    font-weight: 700;
+    font-size: 1.4rem;
+    padding-top: 1rem;
+}

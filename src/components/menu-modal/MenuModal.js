@@ -2,14 +2,23 @@ import "./menu-modal.css";
 
 import { Modal } from "react-bootstrap";
 import MenuModalItem from "./MenuModalItem";
+import { MdClose } from "react-icons/md";
 
-const MenuModal = () => {
+const MenuModal = ({ show, closeHandler }) => {
     return (
-        <Modal className="menu-modal modal-10w" show="true" dialogClassName="modal-10w" centered>
-            <Modal.Header className="mm-header" closeButton>
+        <Modal 
+            className="menu-modal modal-10w" 
+            show={ show } 
+            dialogClassName="modal-10w"
+            onHide={ closeHandler } 
+            centered>
+            <Modal.Header className="mm-header">
                 <Modal.Title className="mm-title">
                     Menu
                 </Modal.Title>
+                <button className="mm-close-btn-c" onClick={ closeHandler }>
+                    <MdClose className="mm-close-btn" />
+                </button>
             </Modal.Header>
             <Modal.Body className="mm-body">
                 <MenuModalItem 
@@ -35,6 +44,18 @@ const MenuModal = () => {
                 />
                 <MenuModalItem 
                     itemName="Dessert"
+                />
+                <MenuModalItem 
+                    itemName="Tandoori Items"
+                />
+                <MenuModalItem 
+                    itemName="Cold drinks"
+                />
+                <MenuModalItem 
+                    itemName="Salad"
+                />
+                <MenuModalItem 
+                    itemName="Rolls"
                 />
             </Modal.Body>
         </Modal>
